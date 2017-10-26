@@ -14,12 +14,14 @@
 #include "UDSSettingsWnd.h"
 #include "UDS_Protocol.h"
 #include "CANDriverDefines.h"
+#include "UDSExtendWnd.h"
 
 
 CUDSMainWnd* omMainWnd = NULL;
 CUDS_NegRespMng* NegRespManager = NULL;
 CUDSSettingsWnd* omSettingsWnd = NULL;
 CUDS_Protocol* omManagerPtr = NULL;
+CUDSExtendWnd* omExtendWnd = NULL;
 
 /** Variable used to control if a message received should be shown */
 bool FDontShow =FALSE;      // if it's TRUE the message should not be shown
@@ -168,6 +170,32 @@ USAGEMODE HRESULT UpdateChannelUDS(HWND hParent)
 }
 
 /**********************************************************************************************************
+ Function Name  :   DIL_UDS_ShowExtendWnd
+
+ Description    :   It's called from the MainFrm to show the UDSExtendWnd
+ Member of      :   CUDS_Protocol
+
+ Author(s)      :   ukign zhou
+ Date Created   :   03.22.2017
+**********************************************************************************************************/
+USAGEMODE HRESULT DIL_UDS_ShowExtendWnd(HWND hParent)
+{
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+	INT_PTR nRet = -1;
+	CWnd objParent;
+	objParent.Attach(hParent);
+
+	if(omExtendWnd == NULL)
+	{
+		omExtendWnd = new CUDSExtendWnd(&objParent);
+		omExtendWnd->Create(IDM_UDS_EXTEND);
+	}
+	omExtendWnd->ShowWindow(SW_SHOW);
+	objParent.Detach();
+    return 0;
+}
+
+/**********************************************************************************************************
  Function Name  :   Show_ResponseData
 
  Input(s)       :   psMsg[] contains the bytes to be shown, Datalen is the position inside of psMsg[]
@@ -277,7 +305,7 @@ USAGEMODE HRESULT EvaluateMessage( STCAN_MSG  Mensaje  )
                     {
                         STMin = psMsg[initialByte+2];
                     }
-                    else if( 0xF1<=psMsg[initialByte+2]<=0xF9)
+					else if (0xF1 <= psMsg[initialByte + 2] && psMsg[initialByte + 2] <= 0xF9)
                     {
                         STMin = (psMsg[initialByte+2]&0x0F)*0.1;
                     }
@@ -365,6 +393,12 @@ USAGEMODE HRESULT EvaluateMessage( STCAN_MSG  Mensaje  )
         }
         omMainWnd->m_omBytes.vSetValue(Length_Received);
     }
+
+	
+	if (omExtendWnd != NULL)
+	{
+		omExtendWnd->ParseUDSData(Mensaje.m_unMsgID, Mensaje.m_ucData, Mensaje.m_ucDataLen, Mensaje.m_ucEXTENDED, Mensaje.m_ucRTR, Mensaje.m_ucChannel);
+	}
     return 0;
 }
 /**********************************************************************************************************

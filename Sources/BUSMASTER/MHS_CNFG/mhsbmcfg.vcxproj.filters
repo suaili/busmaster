@@ -18,16 +18,16 @@
     <ClCompile Include="src\about.C">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\can_setup.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gui_util.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\mhsbmcfg.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\can_setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mhsbmcfg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

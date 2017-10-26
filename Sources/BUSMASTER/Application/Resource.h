@@ -1178,6 +1178,8 @@
 #define ID_BUTTON40060                  40060
 #define ID_BUTTON2                      40061
 #define ID_WINDOW_MANAGER               40061
+#define ID_UDS_EX                       40061
+#define IDM_UDS_EX                      40061
 #define ID_BUTTON3                      40062
 #define ID_BUTTON4                      40063
 #define ID_BUTTON5                      40064

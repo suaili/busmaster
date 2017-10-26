@@ -21,13 +21,28 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TYPELIB
+//
+
+1                       TYPELIB                 "BUSMASTER.tlb"
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
 // English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-
-
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -1439,7 +1454,6 @@ BEGIN
 END
 
 
-
 /////////////////////////////////////////////////////////////////////////////
 //
 // RT_MANIFEST
@@ -1471,7 +1485,7 @@ END
 
 STRINGTABLE
 BEGIN
-    ID_WINDOW_MANAGER       "&Windows..."
+    ID_WINDOW_MANAGER       "For UDS Update"
 END
 
 STRINGTABLE

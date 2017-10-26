@@ -31,6 +31,7 @@ extern "C" {  // only need to export C interface if used by C++ source code
     //__declspec(dllexport) HRESULT DIL_UDS_ShowWnd(void); //Función Para mostrar Main Window
 
     USAGEMODE HRESULT DIL_UDS_ShowWnd(HWND hParent,int TotalChannels);//; //Función Para mostrar Main Window
+    USAGEMODE HRESULT DIL_UDS_ShowExtendWnd(HWND hParent);
     USAGEMODE HRESULT EvaluateMessage( STCAN_MSG  Mensaje  );
     USAGEMODE HRESULT UpdateChannelUDS(HWND hParent);
     USAGEMODE HRESULT DIL_UDS_ShowSettingWnd(HWND hParent);

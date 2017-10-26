@@ -296,6 +296,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWndEx)
     //UDS
     ON_COMMAND(IDM_UDS,OnCfgnUdsMainWnd)
     ON_COMMAND(IDD_SETTINGS_UDS,OnCfgnUdsSettingsWnd)
+    ON_COMMAND(IDM_UDS_EX,OnCfgnUdsExtendWnd)
     ON_WM_SHOWWINDOW()
     ON_WM_DESTROY()
     ON_UPDATE_COMMAND_UI(ID_FILE_NEW, OnUpdateFileNew)
@@ -7698,6 +7699,22 @@ void CMainFrame::OnCfgnUdsMainWnd()
 void CMainFrame::OnCfgnUdsSettingsWnd()
 {
     HRESULT hola = DIL_UDS_ShowSettingWnd(this->m_hWnd);
+}
+
+/*******************************************************************************
+  Function Name  : OnCfgnUdsExtendWnd
+  Input(s)       : -
+  Output         : -
+  Functionality  :
+  Member of      : CMainFrame
+  Author(s)      : ukign zhou
+  Date Created   :
+  Modifications  :
+*******************************************************************************/
+
+void CMainFrame::OnCfgnUdsExtendWnd()
+{
+    HRESULT Temp = DIL_UDS_ShowExtendWnd(this->m_hWnd);
 }
 /******************************************************************************/
 /*  Function Name    :  OnUpdateConfigureBaudrate                             */

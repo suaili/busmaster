@@ -33,6 +33,18 @@
     <ClCompile Include="UDSSettingsWnd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CodeCRC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="S19File.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SecurityAccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UDSExtendWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -64,6 +76,21 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeCRC.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HD10_AC.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="S19File.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SecurityAccess.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UDSExtendWnd.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

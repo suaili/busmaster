@@ -181,7 +181,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CodeCRC.cpp" />
+    <ClCompile Include="S19File.cpp" />
+    <ClCompile Include="SecurityAccess.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="UDSExtendWnd.cpp" />
     <ClCompile Include="UDS_NegRespMng.cpp" />
     <ClCompile Include="UDS_Protocol.cpp" />
     <ClCompile Include="UDS_TimmingWnd.cpp" />
@@ -189,8 +193,13 @@
     <ClCompile Include="UDSSettingsWnd.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CodeCRC.h" />
+    <ClInclude Include="HD10_AC.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="S19File.h" />
+    <ClInclude Include="SecurityAccess.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="UDSExtendWnd.h" />
     <ClInclude Include="UDS_Extern.h" />
     <ClInclude Include="UDS_NegRespMng.h" />
     <ClInclude Include="UDS_Protocol.h" />

@@ -471,6 +471,7 @@ protected:
     //UDS
     afx_msg void OnCfgnUdsMainWnd();
     afx_msg void OnCfgnUdsSettingsWnd();
+    afx_msg void OnCfgnUdsExtendWnd();
     afx_msg void OnAutomationTSEditor();
     afx_msg void OnAutomationTSExecutor();
 
